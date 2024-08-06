@@ -5,12 +5,14 @@ const AdminNavbar = () => {
 
   const navigate = useNavigate();
   const handleLogout = () => {
+    console.log('Logout button clicked'); //
     // Clear any authentication tokens or session data
     // For example, if using localStorage:
     localStorage.removeItem('token');
 
     // Redirect the user to the login page
     navigate('/');
+    console.log(localStorage.getItem('token'));
   };
 
   const handleAddEmployees = () => {
@@ -22,7 +24,7 @@ const AdminNavbar = () => {
   };
   return (
     <>
-    <AppBar position="static">
+    <AppBar position="static"  sx={{ backgroundColor: '#FFC0CB' }}>
       <Container>
         <Toolbar>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>

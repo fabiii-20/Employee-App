@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import AdminNavbar from './components/AdminNavbar';
+import EmployeeNavbar from './components/EmployeeNavbar';
 import Login from './components/Login';
 import AdminDashboard from './pages/AdminDashboard';
 import EmployeeDashboard from './pages/EmployeeDashboard';
@@ -36,6 +38,8 @@ const App = () => {
 
   return (
     <Router>
+      {/* {isLoggedIn && <AdminNavbar onLogout={handleLogout} />}  */}
+      {/* <EmployeeNavbar onLogout={handleLogout}></EmployeeNavbar> */}
       <Routes>
         <Route path="/" element={<LoginRoute element={<Login onLogin={handleLogin} />} />} />
         <Route path="/admin-dashboard" element={<PrivateRoute element={<AdminDashboard />} />} />

@@ -76,7 +76,7 @@ const Login = ({ onLogin }) => {
             color="primary"
             fullWidth
             disabled={loading}
-            sx={{ mt: 2 }}
+            sx={{ mt: 2, backgroundColor: '#FFC0CB' }}
           >
             {loading ? <CircularProgress size={24} color="inherit" /> : 'Log in'}
           </Button>

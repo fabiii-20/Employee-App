@@ -2,7 +2,10 @@
 import axios from 'axios';
 
 const axiosInstance = axios.create({
-  baseURL: 'http://localhost:3000/',
+  baseURL: 'https://employee-app-66iy.onrender.com',
+  headers: {
+    'Content-Type': 'application/json',
+  },
 });
 
 // Add a request interceptor to include the JWT token in the Authorization header

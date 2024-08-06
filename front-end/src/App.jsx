@@ -38,8 +38,6 @@ const App = () => {
 
   return (
     <Router>
-      {/* {isLoggedIn && <AdminNavbar onLogout={handleLogout} />}  */}
-      {/* <EmployeeNavbar onLogout={handleLogout}></EmployeeNavbar> */}
       <Routes>
         <Route path="/" element={<LoginRoute element={<Login onLogin={handleLogin} />} />} />
         <Route path="/admin-dashboard" element={<PrivateRoute element={<AdminDashboard />} />} />
